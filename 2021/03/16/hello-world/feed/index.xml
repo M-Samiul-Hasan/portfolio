@@ -10,7 +10,7 @@
 	Comments on: Hello world!	</title>
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../index.html</link>
-	<description>Just another WordPress site</description>
+	<description>Personal Website of MSH</description>
 	<lastBuildDate>Tue, 16 Mar 2021 10:02:09 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
