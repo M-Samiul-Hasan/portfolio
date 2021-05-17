@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+<style>img.lazy{min-height:1px}</style>
+<link rel="preload" href="./wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
 	<meta charset="UTF-8">
-		<title>Mohammad Samiul Hasan &#8211; Just another WordPress site</title>
+		<title>Mohammad Samiul Hasan &#8211; Personal Website</title>
 <meta name="robots" content="max-image-preview:large">
 <link rel="dns-prefetch" href="//s.w.org">
 <link rel="alternate" type="application/rss+xml" title="Mohammad Samiul Hasan &raquo; Feed" href="./feed/index.html">
@@ -28,14 +30,15 @@ img.emoji {
 <link rel="stylesheet" id="astra-menu-animation-css" href="./wp-content/themes/astra/assets/css/minified/menu-animation.min.css?ver=3.1.2" media="all">
 <link rel="stylesheet" id="wp-block-library-css" href="./wp-includes/css/dist/block-library/style.min.css?ver=5.7.2" media="all">
 <link rel="stylesheet" id="elementor-icons-css" href="./wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.11.0" media="all">
-<link rel="stylesheet" id="elementor-animations-css" href="./wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.1.4" media="all">
-<link rel="stylesheet" id="elementor-frontend-css" href="./wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.1.4" media="all">
-<link rel="stylesheet" id="elementor-post-10-css" href="./wp-content/uploads/elementor/css/post-10.css?ver=1618769700" media="all">
-<link rel="stylesheet" id="elementor-global-css" href="./wp-content/uploads/elementor/css/global.css?ver=1618769701" media="all">
-<link rel="stylesheet" id="elementor-post-17-css" href="./wp-content/uploads/elementor/css/post-17.css?ver=1621020529" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="./wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.2.3" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="./wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.2.3" media="all">
+<style id="elementor-frontend-inline-css">@font-face{font-family:eicons;src:url(./wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(./wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(./wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(./wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(./wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(./wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}</style>
+<link rel="stylesheet" id="elementor-post-10-css" href="./wp-content/uploads/elementor/css/post-10.css?ver=1621231493" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="./wp-content/uploads/elementor/css/global.css?ver=1621231495" media="all">
+<link rel="stylesheet" id="elementor-post-17-css" href="./wp-content/uploads/elementor/css/post-17.css?ver=1621232022" media="all">
 <link rel="stylesheet" id="jltma-bootstrap-css" href="./wp-content/plugins/master-addons/assets/css/bootstrap.min.css?ver=5.7.2" media="all">
 <link rel="stylesheet" id="master-addons-main-style-css" href="./wp-content/plugins/master-addons/assets/css/master-addons-styles.css?ver=5.7.2" media="all">
-<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.7.2" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.7.2" media="all">
 <link rel="stylesheet" id="elementor-icons-shared-0-css" href="./wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1" media="all">
 <link rel="stylesheet" id="elementor-icons-fa-brands-css" href="./wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.1" media="all">
 <!--[if IE]>
@@ -70,84 +73,29 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 <body class="home page-template page-template-elementor_canvas page page-id-17 ast-single-post ast-inherit-site-logo-transparent astra-hfb-header ast-desktop ast-separate-container ast-right-sidebar astra-3.1.2 ast-normal-title-enabled elementor-default elementor-template-canvas elementor-kit-10 elementor-page elementor-page-17">
 			<div data-elementor-type="wp-page" data-elementor-id="17" class="elementor elementor-17" data-elementor-settings="[]">
 							<div class="elementor-section-wrap">
-							<section class="has_ma_el_bg_slider elementor-section elementor-top-section elementor-element elementor-element-a708a08 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a708a08" data-element_type="section">
+							<section class="has_ma_el_bg_slider elementor-section elementor-top-section elementor-element elementor-element-6760fba elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6760fba" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
-					<div class="has_ma_el_bg_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2391589" data-id="2391589" data-element_type="column">
+					<div class="has_ma_el_bg_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7ad1ddc" data-id="7ad1ddc" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-078bed0 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="078bed0" data-element_type="widget" data-widget_type="divider.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-divider">
-			<span class="elementor-divider-separator">
-						</span>
-		</div>
-				</div>
-				</div>
-					</div>
-		</div>
-							</div>
-		</section>
-				<section class="has_ma_el_bg_slider elementor-section elementor-top-section elementor-element elementor-element-a5ae399 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a5ae399" data-element_type="section" id="menu">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="has_ma_el_bg_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-28dc74a" data-id="28dc74a" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-2e66cf4 elementor-fixed elementor-widget elementor-widget-ma-navmenu" data-id="2e66cf4" data-element_type="widget" id="home" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="ma-navmenu.default">
+								<div class="elementor-element elementor-element-558a729 elementor-widget__width-inherit elementor-widget-tablet__width-inherit elementor-fixed elementor-widget elementor-widget-ma-navmenu" data-id="558a729" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="ma-navmenu.default">
 				<div class="elementor-widget-container">
 			<div class="jltma-menu-container">
-<nav id="jltma-nav-menu-element-2e66cf4" class="jltma-elementor-header jltma-nav-menu-element navbar navbar-expand-md navbar-soft default mobile click horizontal menu" data-menu-id="jltma-nav-menu-element-2e66cf4" data-sticky-type="default" data-menu-layout="onepage" data-menu-trigger="click" data-menu-offcanvas="offcanvas" data-menu-toggletype="toggle" data-menu-animation="default" data-menu-container-id="menu"><div class="jltma-nav-panel mobile">
+<nav id="jltma-nav-menu-element-558a729" class="jltma-elementor-header jltma-nav-menu-element navbar navbar-expand-md navbar-soft smart-scroll tablet click horizontal " data-menu-id="jltma-nav-menu-element-558a729" data-sticky-type="smart-scroll" data-menu-layout="onepage" data-menu-trigger="click" data-menu-offcanvas="toggle-bar" data-menu-toggletype="toggle" data-menu-animation="default" data-menu-container-id=""><div class="jltma-nav-panel tablet">
                                 <a class="jltma-nav-logo navbar-brand jltma-col-xs-3 jltma-col-sm-3" href="./index.html">
-                                    <img alt="">
+                                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="" alt="">
                                 </a>
-                                <button class="navbar-toggler ml-md-0 mr-auto py-3" type="button" data-toggle="collapse" data-trigger="#jltma-nav-menu-elementor-2e66cf4" data-target="#jltma-nav-menu-elementor-2e66cf4" aria-expanded="false" aria-label="Toggle Navigation">
-                                    <div class="jltma-burger jltma-thick-small"><span class="mid-line"></span></div>
+                                <button class="navbar-toggler ml-md-0 mr-auto py-3" type="button" data-toggle="collapse" data-trigger="#jltma-nav-menu-elementor-558a729" data-target="#jltma-nav-menu-elementor-558a729" aria-expanded="false" aria-label="Toggle Navigation">
+                                    <div class="jltma-burger jltma-lite-medium"><span class="mid-line"></span></div>
                                 </button>
-                                <button class="jltma-close left"> X </button>
+                                <button class="jltma-close "> X </button>
                             </div>
-<div id="jltma-nav-menu-elementor-2e66cf4" class="jltma-menu-offcanvas-elements jltma-navbar-nav-default mobile-offcanvas collapse navbar-collapse jltma-svg-arrow jltma-small-down jltma-one-page-enabled offcanvas left"><ul id="jltma-main-menu" class="navbar-nav jltma-navbar-nav jltma-menu-position-center toggle">
-<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="#resume" class="menu-link">Resume</a></li>
-<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="#project" class="menu-link">Project</a></li>
-<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="#expertise" class="menu-link">Expertise</a></li>
-<li id="menu-item-249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-249"><a href="#organizations" class="menu-link">Organizations</a></li>
-<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="#contact" class="menu-link">Contact</a></li>
-</ul></div></nav><style>.elementor-element-768 .jltma-nav-menu-element .offcanvas-overlay {
-                            width:0%;
-                            height: 100%;
-                            z-index: 30;
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            opacity:0;
-                            visibility:hidden;
-                            background-color: rgba(34, 34, 34, 0.6);
-                            transition:opacity .2s linear, visibility .1s, width 1s ease-in;
-                        }
-                        .elementor-element-2e66cf4 .jltma-nav-menu-element .offcanvas-overlay.show {
-                            transition:opacity .5s ease, width 0s;
-                            opacity:1;
-                            width:100%;
-                            visibility:visible;
-                        }
-
-                        @media all and (max-width:768px) {
-                            .elementor-element-2e66cf4 .jltma-nav-menu-element .mobile-offcanvas.left{
-                                visibility: hidden;
-                                transform:translateX(-100%);
-                                border-radius:0;
-                                display:block;
-                                position: fixed;
-                                top: 0; left:0;
-                                height: 100%;
-                                z-index: 1200;
-                                width:80%;
-                                overflow-x: hidden;
-                                transition: visibility .2s ease-in-out, transform .2s ease-in-out;
-                            }
-
-                            .elementor-element-2e66cf4 .jltma-nav-menu-element .mobile-offcanvas.left.show{
-                                visibility: visible;
-                                transform: translateX(0);
-                            }
-                        }</style>
-<style>@media only screen and (min-width: 768px) { .elementor-element-2e66cf4 .jltma-burger-box { display: none } }</style>
+<div id="jltma-nav-menu-elementor-558a729" class="jltma-menu-offcanvas-elements jltma-navbar-nav-default tablet-offcanvas collapse navbar-collapse jltma-svg-arrow jltma-small-down jltma-one-page-enabled toggle-bar "><ul id="jltma-main-menu" class="navbar-nav jltma-navbar-nav jltma-menu-position-center toggle">
+<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11 nav-item jltma-megamenu-hover jltma-mobile-builder-content"><a href="#resume" class="jltma-menu-nav-link nav-link menu-link">Resume</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12 nav-item jltma-megamenu-hover jltma-mobile-builder-content"><a href="#project" class="jltma-menu-nav-link nav-link menu-link">Project</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 nav-item jltma-megamenu-hover jltma-mobile-builder-content"><a href="#expertise" class="jltma-menu-nav-link nav-link menu-link">Expertise</a></li>
+<li id="menu-item-249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-249 nav-item jltma-megamenu-hover jltma-mobile-builder-content"><a href="#organizations" class="jltma-menu-nav-link nav-link menu-link">Organizations</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 nav-item jltma-megamenu-hover jltma-mobile-builder-content"><a href="#contact" class="jltma-menu-nav-link nav-link menu-link">Contact</a></li>
+</ul></div></nav><style>@media only screen and (min-width: 1024px) { .elementor-element-558a729 .jltma-burger-box { display: none } }</style>
 </div>		</div>
 				</div>
 					</div>
@@ -160,11 +108,8 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-5737739 elementor-widget elementor-widget-text-editor" data-id="5737739" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h1><strong>Mohammad Samiul Hasan</strong></h1>
-<h4>Dynamic, Enthusiastic Mechanical Engg. Undergrad</h4>
-</div>
-				</div>
+								<h1><strong>Mohammad Samiul Hasan</strong></h1>
+<h4>Dynamic, Enthusiastic Mechanical Engg. Undergrad</h4>						</div>
 				</div>
 					</div>
 		</div>
@@ -192,10 +137,9 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-3be90cb elementor-widget elementor-widget-text-editor" data-id="3be90cb" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><center>
-<h3><span style="text-decoration: underline;"><strong>Resume</strong></span></h3>
-</center></div>
-				</div>
+								<center>
+<h3><span style="text-decoration: underline;"><strong>Resume</strong></span></h3>						</center>
+</div>
 				</div>
 					</div>
 		</div>
@@ -207,9 +151,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-16b06c3 elementor-widget elementor-widget-image" data-id="16b06c3" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="709" height="1024" src="./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan-709x1024.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan-709x1024.png 709w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan-208x300.png 208w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan-80x116.png 80w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan.png 720w" sizes="(max-width: 709px) 100vw, 709px">											</div>
-				</div>
+															<img width="709" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20709%201024'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan-709x1024.png" class="attachment-large size-large lazy" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan-709x1024.png 709w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan-208x300.png 208w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan-80x116.png 80w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan.png 720w" data-sizes="(max-width: 709px) 100vw, 709px">															</div>
 				</div>
 					</div>
 		</div>
@@ -217,9 +159,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-22427b1 elementor-widget elementor-widget-image" data-id="22427b1" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="709" height="1024" src="./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-709x1024.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-709x1024.jpg 709w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-208x300.jpg 208w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-768x1109.jpg 768w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-1063x1536.jpg 1063w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-1418x2048.jpg 1418w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-80x116.jpg 80w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-scaled.jpg 1772w" sizes="(max-width: 709px) 100vw, 709px">											</div>
-				</div>
+															<img width="709" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20709%201024'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-709x1024.jpg" class="attachment-large size-large lazy" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-709x1024.jpg 709w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-208x300.jpg 208w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-768x1109.jpg 768w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-1063x1536.jpg 1063w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-1418x2048.jpg 1418w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-80x116.jpg 80w, ./wp-content/uploads/2021/05/Resume_Mohammad_Samiul_Hasan_corrected-page-002-scaled.jpg 1772w" data-sizes="(max-width: 709px) 100vw, 709px">															</div>
 				</div>
 					</div>
 		</div>
@@ -247,10 +187,9 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-8d81764 elementor-widget elementor-widget-text-editor" data-id="8d81764" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><center>
-<h3><span style="text-decoration: underline;"><strong>Projects</strong></span></h3>
-</center></div>
-				</div>
+								<center>
+<h3><span style="text-decoration: underline;"><strong>Projects</strong></span></h3>						</center>
+</div>
 				</div>
 					</div>
 		</div>
@@ -262,8 +201,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-964d201 elementor-widget elementor-widget-text-editor" data-id="964d201" data-element_type="widget" id="#project" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><p><strong>1. Construction of a 3 DOF SCARA Manipulator with Multi-functional End Effector.</strong><br>SCARA (Selective Compliance Articulated Robot Arm) is the most used robot manipulator in industrial applications such as assembling, pick and place, etc. The project was an academic project under Course MEE368. We, a group of 3, students build this robotic arm. In this project, I worked and learned about Kinematics, Inverse kinematics math problems, how to implement them, python programming particularly.<br><strong>2. Bi-pedal Humanoid Robot “Lee.”</strong><br>Lee is the first-ever human-sized walking robot in Bangladesh. This project has been financed by the ICT division; under the Innovation fund. In this project, my main job was hardware related, drilling, cutting, assembling the hands, legs, body, and one simulation in Matlab which, I failed to do, but acquire knowledge about Matlab.<br><strong>3. Arduino Based Line Follower Robot with PID Controller Mechanism.</strong><br>Built a line follower with the most popular control mechanism, PID, and participated with this robot in three contests. I learned a lot of this during this project, such as teamwork, working under pressure, and dealing with failure.<br><strong>4. Design and Fatigue Analysis of a Reactor Pressure Vessel.</strong><br>It was a freelancing Project; where a conventional pressurized water reactor pressure vessel was designed and analyzed stress-strain nature under different constraints. The project was performed using Solidworks and Ansys. In this project, I designed the RPV in Solidworks, ran simulations in Ansys, and helped to write the report.<br><strong>5. Design of a testing device for rolling resistance of a bicycle tire.</strong><br>It was a freelancing project; where a device was designed to measure the rolling resistance of a tire during its run time. This project was conducted using Solidworks. In this project, I helped to write the report.<br><strong>6. Design and Acoustic Analysis of Motorbike Helmet.</strong><br>It was a freelancing project; where a helmet was designed after assessing the key aerodynamic characteristics; then, acoustic analysis has been performed to measure the noise created due to the helmet. The project was executed using Solidworks and Ansys. In this project, I designed the helmet in Solidworks, helped in simulations, and writing the report.</p></div>
-				</div>
+								<p><strong>1. Construction of a 3 DOF SCARA Manipulator with Multi-functional End Effector.</strong><br>SCARA (Selective Compliance Articulated Robot Arm) is the most used robot manipulator in industrial applications such as assembling, pick and place, etc. The project was an academic project under Course MEE368. We, a group of 3, students build this robotic arm. In this project, I worked and learned about Kinematics, Inverse kinematics math problems, how to implement them, Python programming.<br><strong>2. Bi-pedal Humanoid Robot “Lee.”</strong><br>Lee is the first-ever human-sized walking robot in Bangladesh. This project has been financed by the ICT division; under the Innovation fund. In this project, my main job was hardware related, drilling, cutting, assembling the hands, legs, body, and one simulation in Matlab which I failed to do (Later done by Team leader), but acquire knowledge about Matlab.<br><strong>3. Arduino Based Line Follower Robot with PID Controller Mechanism.</strong><br>Built a line follower with the most popular control mechanism, PID, and participated with this robot in three contests. I learned a lot of this during this project, such as teamwork, working under pressure, and dealing with failure.<br><strong>4. Design and Fatigue Analysis of a Reactor Pressure Vessel.</strong><br>It was a freelancing Project; where a conventional pressurized water reactor pressure vessel was designed and analyzed stress-strain nature under different constraints. The project was performed using Solidworks and Ansys. In this project, I designed the RPV in Solidworks, ran simulations in Ansys, and helped to write the report.<br><strong>5. Design of a testing device for rolling resistance of a bicycle tire.</strong><br>It was a freelancing project; where a device was designed to measure the rolling resistance of a tire during its run time. This project was conducted using Solidworks. In this project, I helped to write the report.<br><strong>6. Design and Acoustic Analysis of Motorbike Helmet.</strong><br>It was a freelancing project; where a helmet was designed after assessing the key aerodynamic characteristics; then, acoustic analysis has been performed to measure the noise created due to the helmet. The project was executed using Solidworks and Ansys. In this project, I designed the helmet in Solidworks, helped in simulations, and writing the report.</p>						</div>
 				</div>
 					</div>
 		</div>
@@ -291,10 +229,9 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-e14f32e elementor-widget elementor-widget-text-editor" data-id="e14f32e" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><center>
-<h3><span style="text-decoration: underline;"><strong>Expertise</strong></span></h3>
-</center></div>
-				</div>
+								<center>
+<h3><span style="text-decoration: underline;"><strong>Expertise</strong></span></h3>						</center>
+</div>
 				</div>
 					</div>
 		</div>
@@ -308,14 +245,14 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 				<div class="elementor-widget-container">
 					<div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
 			<div class="elementor-image-carousel swiper-wrapper">
-				<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/03/Iron-Man-Helmet-750x500.jpg" alt="Iron Man Helmet"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/03/Engine-Assebmly-1-750x500.png" alt="V6 IC Engine"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/03/Engine-Assembly-2-750x500.png" alt="Transparent View of V6 ICE"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/03/Engine-Assembly-4-750x500.png" alt="Cut-off View of V6 ICE"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/03/Double-Wishbone-Suspension-System-750x500.jpg" alt="Double Wishbone Suspension system"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/03/Top-View-750x500.jpg" alt="Top View of Double Wishbone Suspension system"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/03/Wheel-1-750x500.jpg" alt="Wheel"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/03/Condenser-750x500.png" alt="Condenser"></figure></div>			</div>
+				<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20500'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/03/Iron-Man-Helmet-750x500.jpg" alt="Iron Man Helmet"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20500'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/03/Engine-Assebmly-1-750x500.png" alt="V6 IC Engine"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20500'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/03/Engine-Assembly-2-750x500.png" alt="Transparent View of V6 ICE"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20500'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/03/Engine-Assembly-4-750x500.png" alt="Cut-off View of V6 ICE"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20500'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/03/Double-Wishbone-Suspension-System-750x500.jpg" alt="Double Wishbone Suspension system"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20500'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/03/Top-View-750x500.jpg" alt="Top View of Double Wishbone Suspension system"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20500'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/03/Wheel-1-750x500.jpg" alt="Wheel"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20500'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/03/Condenser-750x500.png" alt="Condenser"></figure></div>			</div>
 																<div class="elementor-swiper-button elementor-swiper-button-prev">
 						<i class="eicon-chevron-left" aria-hidden="true"></i>
 						<span class="elementor-screen-only">Previous</span>
@@ -333,8 +270,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-50a7b35 elementor-widget elementor-widget-text-editor" data-id="50a7b35" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h4><strong>Computer Aided Design (CAD):</strong></h4>
+								<h4><strong>Computer Aided Design (CAD):</strong></h4>
 <ul>
 <li>SolidWorks             ||       Proficiency Level &#8211; Medium</li>
 <li>AutoCAD                 ||       Proficiency Level &#8211; Basic</li>
@@ -342,9 +278,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 </li>
 </ul>
 <h4><strong>Computer Aided Manufacturing (CAM):</strong></h4>
-<ul><li>MasterCAM            ||       Planning to learn soon </li></ul>
-</div>
-				</div>
+<ul><li>MasterCAM            ||       Planning to learn soon </li></ul>						</div>
 				</div>
 					</div>
 		</div>
@@ -358,12 +292,12 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 				<div class="elementor-widget-container">
 					<div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
 			<div class="elementor-image-carousel swiper-wrapper">
-				<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/05/EmbeddedImage-1.gif" alt="EmbeddedImage (1)"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/05/EmbeddedImage-768x396.gif" alt="EmbeddedImage"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/05/Deformation.gif" alt="Deformation"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/04/1.-Total-Deformation-768x276.png" alt="1. Total Deformation"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/04/2.-Total-Deformation-2-768x274.png" alt="2. Total Deformation-2"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/04/3.-Shear-Stress-768x274.png" alt="3. Shear Stress"></figure></div>			</div>
+				<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20303'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/05/EmbeddedImage-1.gif" alt="EmbeddedImage (1)"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20396'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/05/EmbeddedImage-768x396.gif" alt="EmbeddedImage"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20480'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/05/Deformation.gif" alt="Deformation"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20276'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/1.-Total-Deformation-768x276.png" alt="1. Total Deformation"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20274'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/2.-Total-Deformation-2-768x274.png" alt="2. Total Deformation-2"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20274'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/3.-Shear-Stress-768x274.png" alt="3. Shear Stress"></figure></div>			</div>
 																<div class="elementor-swiper-button elementor-swiper-button-prev">
 						<i class="eicon-chevron-left" aria-hidden="true"></i>
 						<span class="elementor-screen-only">Previous</span>
@@ -381,8 +315,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-4bf0c38 elementor-widget elementor-widget-text-editor" data-id="4bf0c38" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h4><strong>Computer Aided Engineering (CAE):</strong></h4>
+								<h4><strong>Computer Aided Engineering (CAE):</strong></h4>
 <ul>
 <li>Ansys                       ||       Proficiency Level &#8211; Medium</li>
 <li>LAMMPS                 ||       Proficiency Level – Basic</li>
@@ -390,9 +323,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 </ul>
 <h4><strong>Programmable Logic Circuit (PLC):</strong></h4>
 <ul><li> Simens SIMATIC   ||       Planning to learn soon</li></ul>
-<div> </div>
-</div>
-				</div>
+<div> </div>						</div>
 				</div>
 					</div>
 		</div>
@@ -406,7 +337,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 				<div class="elementor-widget-container">
 					<div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
 			<div class="elementor-image-carousel swiper-wrapper">
-				<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/04/programming-code-icon-abstract-code-icon-logo-vector-20289692-e1617372477972-150x150.jpg" alt="Programming code icon vector. Abstract code icon logo design made of color pieces"></figure></div>			</div>
+				<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/programming-code-icon-abstract-code-icon-logo-vector-20289692-e1617372477972-150x150.jpg" alt="Programming code icon vector. Abstract code icon logo design made of color pieces"></figure></div>			</div>
 					</div>
 				</div>
 				</div>
@@ -416,16 +347,13 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-1eba91e elementor-widget elementor-widget-text-editor" data-id="1eba91e" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h4><strong>Programming:</strong></h4>
+								<h4><strong>Programming:</strong></h4>
 <ul>
 <li>Python                   ||       Proficiency Level &#8211; Medium</li>
 <li>C Program            ||       Proficiency Level &#8211; Medium</li>
 <li>GNU Octave <span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Sans-serif; font-weight: var( --e-global-typography-text-font-weight );">        ||       Proficiency Level &#8211; Medium</span>
 </li>
-</ul>
-</div>
-				</div>
+</ul>						</div>
 				</div>
 					</div>
 		</div>
@@ -439,10 +367,10 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 				<div class="elementor-widget-container">
 					<div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
 			<div class="elementor-image-carousel swiper-wrapper">
-				<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/04/Au_1_Twin-768x525.png" alt="Au_1_Twin"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/05/Stress-Strain-Curve-No-kink-768x593.png" alt="Stress Strain Curve No kink"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/04/Au_2_Twin-768x521.png" alt="Au_2_Twin"></figure></div>
-<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/05/Au-1-Twin-768x593.png" alt="Au 1 Twin"></figure></div>			</div>
+				<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20525'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/Au_1_Twin-768x525.png" alt="Au_1_Twin"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20593'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/05/Stress-Strain-Curve-No-kink-768x593.png" alt="Stress Strain Curve No kink"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20521'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/Au_2_Twin-768x521.png" alt="Au_2_Twin"></figure></div>
+<div class="swiper-slide"><figure class="swiper-slide-inner"><img class="swiper-slide-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20593'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/05/Au-1-Twin-768x593.png" alt="Au 1 Twin"></figure></div>			</div>
 																<div class="elementor-swiper-button elementor-swiper-button-prev">
 						<i class="eicon-chevron-left" aria-hidden="true"></i>
 						<span class="elementor-screen-only">Previous</span>
@@ -460,8 +388,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-49c2ccd elementor-widget elementor-widget-text-editor" data-id="49c2ccd" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h4><strong>Data Analysis:</strong></h4>
+								<h4><strong>Data Analysis:</strong></h4>
 <ul>
 <li>SPSS <span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Sans-serif; font-weight: var( --e-global-typography-text-font-weight );">&nbsp;</span><span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Sans-serif; font-weight: var( --e-global-typography-text-font-weight );">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ||&nbsp; &nbsp; &nbsp; &nbsp;Proficiency Level &#8211; Medium</span>
 </li>
@@ -472,9 +399,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 <ul>
 <li>MS Word, PowerPoint, Excel</li>
 <li><span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Sans-serif; font-weight: var( --e-global-typography-text-font-weight );">Google Docs, Sheets</span></li>
-</ul>
-</div>
-				</div>
+</ul>						</div>
 				</div>
 					</div>
 		</div>
@@ -502,10 +427,9 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-594a631 elementor-widget elementor-widget-text-editor" data-id="594a631" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><center>
-<h3><span style="text-decoration: underline;"><strong>Organizations</strong></span></h3>
-</center></div>
-				</div>
+								<center>
+<h3><span style="text-decoration: underline;"><strong>Organizations</strong></span></h3>						</center>
+</div>
 				</div>
 					</div>
 		</div>
@@ -517,9 +441,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-7333127 elementor-widget elementor-widget-image" data-id="7333127" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="300" height="297" src="./wp-content/uploads/2021/04/rsz_sustcast-300x297.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="./wp-content/uploads/2021/04/rsz_sustcast-300x297.png 300w, ./wp-content/uploads/2021/04/rsz_sustcast-150x150.png 150w, ./wp-content/uploads/2021/04/rsz_sustcast-70x70.png 70w, ./wp-content/uploads/2021/04/rsz_sustcast-127x127.png 127w, ./wp-content/uploads/2021/04/rsz_sustcast-125x125.png 125w, ./wp-content/uploads/2021/04/rsz_sustcast-117x116.png 117w, ./wp-content/uploads/2021/04/rsz_sustcast.png 387w" sizes="(max-width: 300px) 100vw, 300px">											</div>
-				</div>
+															<img width="300" height="297" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20297'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/rsz_sustcast-300x297.png" class="attachment-medium size-medium lazy" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/04/rsz_sustcast-300x297.png 300w, ./wp-content/uploads/2021/04/rsz_sustcast-150x150.png 150w, ./wp-content/uploads/2021/04/rsz_sustcast-70x70.png 70w, ./wp-content/uploads/2021/04/rsz_sustcast-127x127.png 127w, ./wp-content/uploads/2021/04/rsz_sustcast-125x125.png 125w, ./wp-content/uploads/2021/04/rsz_sustcast-117x116.png 117w, ./wp-content/uploads/2021/04/rsz_sustcast.png 387w" data-sizes="(max-width: 300px) 100vw, 300px">															</div>
 				</div>
 					</div>
 		</div>
@@ -527,13 +449,10 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-0c37bbe elementor-widget elementor-widget-text-editor" data-id="0c37bbe" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h6> </h6>
+								<h6> </h6>
 <h6><strong style="font-size: 1.33333rem; font-style: inherit; font-family: var( --e-global-typography-text-font-family ), Sans-serif;">Product Management Associate, SUSTcast.</strong></h6>
 <p>March 2020 &#8211; Present</p>
-<p><span style="font-weight: var( --e-global-typography-text-font-weight ); color: rgba(0, 0, 0, 0.9); font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 14px;">SUSTcast, a joint project of RoboSUST, SUST CSE, and Team Meow is the first-ever AI-based radio station in SUST. </span><span style="font-weight: var( --e-global-typography-text-font-weight ); color: rgba(0, 0, 0, 0.9); font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 14px;">As a Product management Associate, my task was to find new program ideas for sustainable growth, managing sponsorship, analyzing must add features in the app, etc.</span></p>
-</div>
-				</div>
+<p><span style="font-weight: var( --e-global-typography-text-font-weight ); color: rgba(0, 0, 0, 0.9); font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 14px;">SUSTcast, a joint project of RoboSUST, SUST CSE, and Team Meow is the first-ever AI-based radio station in SUST. </span><span style="font-weight: var( --e-global-typography-text-font-weight ); color: rgba(0, 0, 0, 0.9); font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 14px;">As a Product management Associate, my task was to find new program ideas for sustainable growth, managing sponsorship, analyzing must add features in the app, etc.</span></p>						</div>
 				</div>
 					</div>
 		</div>
@@ -545,9 +464,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-d63a68f elementor-widget elementor-widget-image" data-id="d63a68f" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="300" height="300" src="./wp-content/uploads/2021/04/rsz_robosust-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="./wp-content/uploads/2021/04/rsz_robosust-300x300.png 300w, ./wp-content/uploads/2021/04/rsz_robosust-150x150.png 150w, ./wp-content/uploads/2021/04/rsz_robosust-768x771.png 768w, ./wp-content/uploads/2021/04/rsz_robosust-70x70.png 70w, ./wp-content/uploads/2021/04/rsz_robosust-127x127.png 127w, ./wp-content/uploads/2021/04/rsz_robosust-476x476.png 476w, ./wp-content/uploads/2021/04/rsz_robosust-125x125.png 125w, ./wp-content/uploads/2021/04/rsz_robosust-116x116.png 116w, ./wp-content/uploads/2021/04/rsz_robosust.png 920w" sizes="(max-width: 300px) 100vw, 300px">											</div>
-				</div>
+															<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/rsz_robosust-300x300.png" class="attachment-medium size-medium lazy" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/04/rsz_robosust-300x300.png 300w, ./wp-content/uploads/2021/04/rsz_robosust-150x150.png 150w, ./wp-content/uploads/2021/04/rsz_robosust-768x771.png 768w, ./wp-content/uploads/2021/04/rsz_robosust-70x70.png 70w, ./wp-content/uploads/2021/04/rsz_robosust-127x127.png 127w, ./wp-content/uploads/2021/04/rsz_robosust-476x476.png 476w, ./wp-content/uploads/2021/04/rsz_robosust-125x125.png 125w, ./wp-content/uploads/2021/04/rsz_robosust-116x116.png 116w, ./wp-content/uploads/2021/04/rsz_robosust.png 920w" data-sizes="(max-width: 300px) 100vw, 300px">															</div>
 				</div>
 					</div>
 		</div>
@@ -555,15 +472,14 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-3f33473 elementor-widget elementor-widget-text-editor" data-id="3f33473" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h4><strong>Deputy Director of Robotics, RoboSUST.</strong></h4>
+								<h4><strong>Deputy Director of Robotics, RoboSUST.</strong></h4>
 <p>February 2020 &#8211; Present</p>
 <h6 style="font-style: normal;">Notable Tasks:</h6>
 <ul style="font-size: 15px; font-style: normal; font-weight: 400; color: #807d7d;">
 <li style="font-size: 15px;">Managed five weeks-long “Introduction to Robotics Workshop” for session 2019-20 students.</li>
 <li style="font-size: 15px;">Took a session on “Introduction to Robotics” at the Introduction to Robotics Workshop.</li>
 <li style="font-size: 15px;">Mentored up to five teams to build their 1st robot.</li>
-<li style="font-size: 15px;">Helped to Plan various webinars during the coronavirus pandemic.</li>
+<li style="font-size: 15px;">Helped to plan various webinars during the coronavirus pandemic.</li>
 </ul>
 <h4><strong>Assistant Research and Development Secretary, RoboSUST.</strong></h4>
 <p>January 2018 &#8211; February 2019</p>
@@ -571,9 +487,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 <ul>
 <li>Advanced Robotics: PID, Maze and Obstacle Avoiding</li>
 <li>Advanced Robotics: Introduction to Robot Simulation.</li>
-</ul>
-</div>
-				</div>
+</ul>						</div>
 				</div>
 					</div>
 		</div>
@@ -585,9 +499,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-779a405 elementor-widget elementor-widget-image" data-id="779a405" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="300" height="169" src="./wp-content/uploads/2021/04/rsz_friday_lab-300x169.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="./wp-content/uploads/2021/04/rsz_friday_lab-300x169.png 300w, ./wp-content/uploads/2021/04/rsz_friday_lab-768x432.png 768w, ./wp-content/uploads/2021/04/rsz_friday_lab-206x116.png 206w, ./wp-content/uploads/2021/04/rsz_friday_lab.png 1024w" sizes="(max-width: 300px) 100vw, 300px">											</div>
-				</div>
+															<img width="300" height="169" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20169'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/rsz_friday_lab-300x169.png" class="attachment-medium size-medium lazy" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/04/rsz_friday_lab-300x169.png 300w, ./wp-content/uploads/2021/04/rsz_friday_lab-768x432.png 768w, ./wp-content/uploads/2021/04/rsz_friday_lab-206x116.png 206w, ./wp-content/uploads/2021/04/rsz_friday_lab.png 1024w" data-sizes="(max-width: 300px) 100vw, 300px">															</div>
 				</div>
 					</div>
 		</div>
@@ -595,14 +507,11 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-ef69adb elementor-widget elementor-widget-text-editor" data-id="ef69adb" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h4><strong> Mechanical Engineer, Roboticist, Friday Lab.</strong></h4>
+								<h4><strong> Mechanical Engineer, Roboticist, Friday Lab.</strong></h4>
 <p>June 2018 &#8211; December 2020</p>
 <h4><strong>Apprentice, Friday Lab.</strong></h4>
 <p>December 2017 &#8211; June 2018</p>
-<p>Friday lab is a team of Robo-enthusiast peoples who used to build different robots and research new technology. Friday lab has to build the first social humanoid who can speak Bangla and later has made the country’s first bipedal walking robot. I have Performed different mechanical tasks, Designing, 3D printing, simulation here.</p>
-</div>
-				</div>
+<p>Friday lab is a team of Robo-enthusiast peoples who used to build different robots and research new technology. Friday lab has to build the first social humanoid who can speak Bangla and later has made the country’s first bipedal walking robot. I have Performed different mechanical tasks, Designing, 3D printing, simulation here.</p>						</div>
 				</div>
 					</div>
 		</div>
@@ -614,9 +523,7 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-064dcca elementor-widget elementor-widget-image" data-id="064dcca" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="300" height="245" src="./wp-content/uploads/2021/04/BIF-300x245.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="./wp-content/uploads/2021/04/BIF-300x245.png 300w, ./wp-content/uploads/2021/04/BIF-1024x838.png 1024w, ./wp-content/uploads/2021/04/BIF-768x628.png 768w, ./wp-content/uploads/2021/04/BIF-1536x1256.png 1536w, ./wp-content/uploads/2021/04/BIF-142x116.png 142w, ./wp-content/uploads/2021/04/BIF.png 1543w" sizes="(max-width: 300px) 100vw, 300px">											</div>
-				</div>
+															<img width="300" height="245" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20245'%3E%3C/svg%3E" data-src="./wp-content/uploads/2021/04/BIF-300x245.png" class="attachment-medium size-medium lazy" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/04/BIF-300x245.png 300w, ./wp-content/uploads/2021/04/BIF-1024x838.png 1024w, ./wp-content/uploads/2021/04/BIF-768x628.png 768w, ./wp-content/uploads/2021/04/BIF-1536x1256.png 1536w, ./wp-content/uploads/2021/04/BIF-142x116.png 142w, ./wp-content/uploads/2021/04/BIF.png 1543w" data-sizes="(max-width: 300px) 100vw, 300px">															</div>
 				</div>
 					</div>
 		</div>
@@ -624,13 +531,10 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-00a19fa elementor-widget elementor-widget-text-editor" data-id="00a19fa" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix">
-<h6> </h6>
+								<h6> </h6>
 <h6><strong style="font-size: 1.33333rem; font-style: inherit; font-family: var( --e-global-typography-text-font-family ), Sans-serif;">Team Member, CanSAT Making Team, Bangladesh Innovation Forum</strong></h6>
 <p>December 2019 &#8211; Present</p>
-<p>Bangladesh Innovation Forum, a voluntary organization, took a goal to make a CanSAT (Can-shaped miniature satellite). Among many candidates, I got selected for the team. Attended two-three meetings to set our target. Currently, the team activities are being discontinued due to the Coronavirus pandemic.</p>
-</div>
-				</div>
+<p>Bangladesh Innovation Forum, a voluntary organization, took a goal to make a CanSAT (Can-shaped miniature satellite). Among many candidates, I got selected for the team. Attended two-three meetings to set our target. Currently, the team activities are being discontinued due to the Coronavirus pandemic.</p>						</div>
 				</div>
 					</div>
 		</div>
@@ -658,10 +562,9 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-884b19d elementor-widget elementor-widget-text-editor" data-id="884b19d" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><center>
-<h3><span style="text-decoration: underline;"><strong>Contact</strong></span></h3>
-</center></div>
-				</div>
+								<center>
+<h3><span style="text-decoration: underline;"><strong>Contact</strong></span></h3>						</center>
+</div>
 				</div>
 					</div>
 		</div>
@@ -707,8 +610,9 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-693b3be elementor-widget elementor-widget-text-editor" data-id="693b3be" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><center><h6><strong>Make it Work, Make it Good, Make it Great.</strong></h6></center></div>
-				</div>
+								<center>
+<h6><strong>Make it Work, Make it Good, Make it Great.</strong></h6>						</center>
+</div>
 				</div>
 					</div>
 		</div>
@@ -760,31 +664,37 @@ function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)
 var astra = {"break_point":"921","isRtl":""};
 </script>
 <script src="./wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=3.1.2" id="astra-theme-js-js"></script>
-<script id="kaliforms-submission-frontend-js-extra">
-var KaliFormsObject = {"ajaxurl":".\/wp-admin\/admin-ajax.php","ajax_nonce":"e23db56fad"};
-</script>
-<script src="./wp-content/plugins/kali-forms//public/assets/submissions/frontend/js/kaliforms-submissions.js?ver=2.3.3" id="kaliforms-submission-frontend-js"></script>
-<script src="./wp-content/plugins/master-addons/assets/js/plugins.js?ver=1.5.9" id="master-addons-plugins-js"></script>
+<script src="./wp-content/plugins/master-addons/assets/js/plugins.js?ver=1.6.2" id="master-addons-plugins-js"></script>
 <script id="master-addons-scripts-js-extra">
 var jltma_scripts = {"plugin_url":".\/wp-content\/plugins\/master-addons","ajaxurl":".\/wp-admin\/admin-ajax.php","nonce":"master-addons-elementor"};
 </script>
-<script src="./wp-content/plugins/master-addons/assets/js/master-addons-scripts.js?ver=1.5.9" id="master-addons-scripts-js"></script>
+<script src="./wp-content/plugins/master-addons/assets/js/master-addons-scripts.js?ver=1.6.2" id="master-addons-scripts-js"></script>
 <script src="./wp-includes/js/wp-embed.min.js?ver=5.7.2" id="wp-embed-js"></script>
-<script src="./wp-content/plugins/master-addons/assets/js/bootstrap.min.js?ver=1.5.9" id="jltma-bootstrap-js"></script>
-<script src="./wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.1.4" id="elementor-webpack-runtime-js"></script>
-<script src="./wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.1.4" id="elementor-frontend-modules-js"></script>
-<script src="./wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" id="jquery-ui-core-js"></script>
-<script src="./wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" id="elementor-dialog-js"></script>
+<script src="./wp-content/plugins/master-addons/assets/js/bootstrap.min.js?ver=1.6.2" id="jltma-bootstrap-js"></script>
+<script src="./wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.2.3" id="elementor-webpack-runtime-js"></script>
+<script src="./wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.2.3" id="elementor-frontend-modules-js"></script>
 <script src="./wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
-<script src="./wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.1.4" id="share-link-js"></script>
+<script src="./wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" id="jquery-ui-core-js"></script>
 <script src="./wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" id="swiper-js"></script>
+<script src="./wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.2.3" id="share-link-js"></script>
+<script src="./wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" id="elementor-dialog-js"></script>
 <script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false,"isImprovedAssetsLoading":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.1.4","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"a11y_improvements":true,"landing-pages":true},"urls":{"assets":".\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":17,"title":"Mohammad%20Samiul%20Hasan%20%E2%80%93%20Just%20another%20WordPress%20site","excerpt":"","featuredImage":false}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1365,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1620,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"direction":"min","is_enabled":false}}},"version":"3.2.3","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"a11y_improvements":true,"landing-pages":true},"urls":{"assets":".\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":17,"title":"Mohammad%20Samiul%20Hasan%20%E2%80%93%20Personal%20Website","excerpt":"","featuredImage":false}};
 </script>
-<script src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.1.4" id="elementor-frontend-js"></script>
-<script src="./wp-content/plugins/elementor/assets/js/preloaded-elements-handlers.min.js?ver=3.1.4" id="preloaded-elements-handlers-js"></script>
+<script src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.2.3" id="elementor-frontend-js"></script>
+<script src="./wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.2.3" id="preloaded-modules-js"></script>
 			<script>
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
 			</script>
-				</body>
+				<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="./wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script>
+</body>
+
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Lazy Loading
+
+Served from: localhost @ 2021-05-17 12:13:46 by W3 Total Cache
+-->
 </html>

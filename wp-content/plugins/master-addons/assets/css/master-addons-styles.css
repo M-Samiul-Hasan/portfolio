@@ -74,7 +74,7 @@ body {
     -webkit-align-items: center;
     align-items: center;
     cursor: pointer;
-    padding:15px;
+    padding: 15px;
 }
 
 .ma-advanced-accordion .ma-accordion-tab-title:focus {
@@ -148,7 +148,7 @@ body {
     background: #4b00e7;
 }
 
-/* Tooltip rgb(94, 93, 96)/
+/* Tooltip Start*/
 .ma-el-tooltip {
     transition: all 0.3s ease;
 }
@@ -12437,7 +12437,7 @@ Mega Menu Customization
 /* Badge */
 .jltma-menu-badge {
     position: absolute;
-    top: -5px;
+    top: -22px;
     left: 40px;
     background-color: #bbb;
     color: #fff;
@@ -15525,7 +15525,7 @@ ul.jltma-toggle-content-controls {
 }
 .jltma-swiper__navigation--middle.jltma-swiper__navigation--center {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .jltma-swiper__navigation--middle.jltma-swiper__navigation--left {
     align-items: center;
