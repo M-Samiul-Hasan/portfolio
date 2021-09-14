@@ -16,7 +16,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.7.2</generator>
+	<generator>https://wordpress.org/?v=5.8.1</generator>
 	<item>
 		<title>
 		By: A WordPress Commenter		</title>
@@ -43,5 +43,5 @@ Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3
 
 Page Caching using disk: enhanced (Page is feed) 
 
-Served from: localhost @ 2021-07-06 13:11:10 by W3 Total Cache
+Served from: localhost @ 2021-09-14 18:33:01 by W3 Total Cache
 -->

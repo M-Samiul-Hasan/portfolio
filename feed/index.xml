@@ -18,7 +18,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.7.2</generator>
+	<generator>https://wordpress.org/?v=5.8.1</generator>
 	<item>
 		<title>Hello world!</title>
 		<link>./../2021/03/16/hello-world/index.html</link>
@@ -47,5 +47,5 @@ Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3
 
 Page Caching using disk: enhanced (Page is feed) 
 
-Served from: localhost @ 2021-07-06 13:10:57 by W3 Total Cache
+Served from: localhost @ 2021-09-14 18:32:45 by W3 Total Cache
 -->
